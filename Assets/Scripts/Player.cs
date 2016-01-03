@@ -5,11 +5,17 @@ public class Player : Actor {
 
   public float playerSpeed;
 
+  private int fireDelay;
+
   protected override void Start() {
     base.Start();
   }
 
   void Update() {
+    if (Input.GetButtonDown("Fire1")) {
+      Attack();
+    }
+
     Move();
   }
 
@@ -18,5 +24,10 @@ public class Player : Actor {
     float velocityY = Input.GetAxisRaw ("Vertical") * playerSpeed;
 
     base.Move(velocityX, velocityY);
+  }
+
+  protected override void Attack() {
+    Debug.Log("Pew pew");
+    //Projectile projectile = new Projectile();
   }
 }
