@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : Actor {
 
   public float playerSpeed;
+  public Transform projectile;
 
   private int fireDelay;
 
@@ -20,14 +21,15 @@ public class Player : Actor {
   }
 
   private void Move() {
-    float velocityX = Input.GetAxisRaw ("Horizontal") * playerSpeed;
-    float velocityY = Input.GetAxisRaw ("Vertical") * playerSpeed;
+    float velocityX = Input.GetAxisRaw("Horizontal") * playerSpeed;
+    float velocityY = Input.GetAxisRaw("Vertical") * playerSpeed;
 
     base.Move(velocityX, velocityY);
   }
 
   protected override void Attack() {
-    Debug.Log("Pew pew");
-    //Projectile projectile = new Projectile();
+    Vector3 playerPosition = transform.position;
+    playerPosition.y += 1f;
+    Instantiate(projectile, playerPosition, Quaternion.identity);
   }
 }
