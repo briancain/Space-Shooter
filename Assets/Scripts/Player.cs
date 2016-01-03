@@ -29,7 +29,7 @@ public class Player : Actor {
 
   protected override void Attack() {
     Vector3 playerPosition = transform.position;
-    playerPosition.y += 1f;
+    playerPosition.y += 0.5f;
     Instantiate(projectile, playerPosition, Quaternion.identity);
   }
 }

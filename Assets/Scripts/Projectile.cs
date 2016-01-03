@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour {
 
   void Move() {
     if (rb2D.position.y <= 5f) {
-      rb2D.velocity = new Vector2(projPosition.x, 5f);
+      rb2D.velocity = new Vector2(0f, 5f);
     } else {
       Destroy(gameObject);
     }
