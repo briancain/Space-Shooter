@@ -27,10 +27,10 @@ public abstract class Actor : MonoBehaviour {
   void RepositionActor() {
     Vector2 newPosition = rb.position;
 
-    if (rb.position.x > 9.5f) {
-      newPosition.x = -9.5f;
-    } else if (rb.position.x < -9.5f) {
-      newPosition.x = 9.5f;
+    if (rb.position.x > 10.5f) {
+      newPosition.x = -10.5f;
+    } else if (rb.position.x < -10.5f) {
+      newPosition.x = 10.5f;
     } else if (rb.position.y > 5f) {
       newPosition.y = -5f;
     } else if (rb.position.y < -5f) {
