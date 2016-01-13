@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour {
   public GameObject[] meteorArr;
   public GameObject meteor;
 
+  public int enemyTotal;
+
   private int score;
-  private int enemyTotal;
 
   void InitGame() {
     Instantiate(player, new Vector3(0f, -3.5f, 0f), Quaternion.identity);
@@ -41,5 +42,8 @@ public class GameManager : MonoBehaviour {
 
   void Awake() {
     InitGame();
+  }
+
+  void Update() {
   }
 }
