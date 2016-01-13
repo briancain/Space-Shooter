@@ -32,4 +32,11 @@ public class Player : Actor {
     playerPosition.y += 0.5f;
     Instantiate(projectile, playerPosition, Quaternion.identity);
   }
+
+  void OnCollisionEnter2D(Collision2D coll) {
+    if (coll.gameObject.tag == "Meteor") {
+      Debug.Log("Game Over");
+      Destroy(gameObject);
+    }
+  }
 }
