@@ -6,12 +6,12 @@ public abstract class Actor : MonoBehaviour {
   private Rigidbody2D rb;
 
   // Use this for initialization
-  protected virtual void Start () {
+  protected virtual void Start() {
     rb = gameObject.GetComponent<Rigidbody2D>();
   }
 
   // Update is called once per frame
-  void Update () {
+  void Update() {
   }
 
   // Collision detection
