@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
     meteorArr = new GameObject[size];
 
     for (int i = 0; i < size; i++) {
-      Vector3 randomPos = new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0f);
+      Vector3 randomPos = new Vector3(Random.Range(-10, 10), Random.Range(-2, 5), 0f);
       meteorArr[i] = (GameObject)Instantiate(meteor, randomPos, Quaternion.identity);
     }
   }
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
     enemyArr = new GameObject[size];
 
     for (int i = 0; i < size; i++) {
-      Vector3 randomPos = new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0f);
+      Vector3 randomPos = new Vector3(Random.Range(-9, 9), Random.Range(-5, 5), 0f);
       enemyArr[i] = (GameObject)Instantiate(enemy, randomPos, Quaternion.identity);
     }
   }
